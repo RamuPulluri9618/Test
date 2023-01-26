@@ -21,6 +21,8 @@ public class HeadlessBrowser {
 		driver.get("https://www.saucedemo.com/");
 		
 		System.out.println("Page Title is"+driver.getTitle());
+		
+		System.out.println("Page Title is"+driver.getTitle());
 
 	}
 
