@@ -1,0 +1,27 @@
+package day4;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import org.testng.annotations.Test;
+
+public class ParsingJSONResponseData {
+
+	@Test(priority=1)
+	void testJsonResponse() {
+		
+		 given()
+		 		
+		 .when()
+		 	.get("http://localhost:3000/store/0")
+		 
+		 .then()
+		 		.statusCode(200)
+		 		.header("Content-Type", "application/json; charset=utf-8")
+		 		.body("x.book[3].title", equalTo("The Lord of Rings"))
+		 		.body("x.book[1].author", equalTo("Even Waugh"))
+		 		.log().all();
+		
+		
+	}
+}

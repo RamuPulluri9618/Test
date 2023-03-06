@@ -1,0 +1,22 @@
+package day3;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import org.testng.annotations.Test;
+
+public class CookiesandHeaders {
+
+	@Test
+	void testCookies() {
+		
+		given()
+		
+		.when()
+			.get("https://google.com/")
+			
+		.then()
+			.cookie("AEC","ARSKqsLLyhMQZuWVGf5TY0akiU2eTpbbN9jIJ9oLMRrIfhgYh-uYzzOCB8g")
+			.log().all();
+	}
+}

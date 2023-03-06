@@ -1,0 +1,72 @@
+package day1;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+public class Student {
+	
+	int id=7;
+	//@Test
+	void getStudentDetails() {
+		
+		when()
+			 .get("http://localhost:3000/students").
+		then()
+			.statusCode(200)
+			.log().all();
+	}
+	
+	//@Test
+	void createStudentDetail() {
+		
+		HashMap data= new HashMap();
+		data.put("name", "raghu");
+		data.put("location", "america");
+		
+		id=given()
+				.contentType("application/json").body(data).
+		when()
+			 .post("http://localhost:3000/students")
+			 .jsonPath().getInt("id");
+		
+		System.out.println("id atcreateStudentDetail "+id);
+		
+	}
+	
+	//@Test
+	void updateStudentDetail() {
+		
+		HashMap data= new HashMap();
+		data.put("name", "ramesh");
+		data.put("location", "america");
+		
+		given()
+				.contentType("application/json").body(data).
+		when()
+				.post("http://localhost:3000/students"+id).
+		then()
+			.log().all();
+				
+		
+	}
+	
+	@Test
+	void deleteStudentDetail() {
+		
+		
+		when()
+				.post("http://localhost:3000/students"+id).
+		then()
+			.log().all();
+				
+		
+	}
+	
+	
+	
+
+}

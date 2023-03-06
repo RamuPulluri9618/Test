@@ -1,0 +1,33 @@
+package day2;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.HashMap;
+
+import org.testng.annotations.Test;
+
+/*
+ Ways to create post request
+ 
+ 1.Post request body using HashMap
+ 2.Post request body using Org.Json
+ 3.Post request body using POJO Class
+ 4.Post request body using json data
+ */
+
+public class DiffwaysToCreatePostRequest {
+	
+	
+	@Test
+	void testPostUsingHashMap() {
+		
+		HashMap data =new HashMap();
+		data.put("name", "raghu");
+		data.put("location", "america");
+		data.put("phone", "789456");
+		
+	}
+	
+	
+}

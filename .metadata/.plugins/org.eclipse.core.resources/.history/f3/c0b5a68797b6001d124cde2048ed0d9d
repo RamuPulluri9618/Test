@@ -1,0 +1,29 @@
+package day1;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+/*
+ * Given() - content type,set cookies,add auth,add param, set header info etc...
+ * When() - get(), post(), put()s, delete().
+ * Then() - validate status code, extract response,extract header cookies and response body....
+ */
+
+public class HTTPrequests {
+	
+	@Test
+	void getUser() {
+		
+		given()
+		
+		.when()
+			.get("https://reqres.in/api/users?page=2")
+		
+		.then()
+			.statusCode(200)
+			.body("page",equalTo(2));
+			//.log().all();
+	}
+
+}
