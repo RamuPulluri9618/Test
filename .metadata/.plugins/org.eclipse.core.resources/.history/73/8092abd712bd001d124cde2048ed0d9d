@@ -1,0 +1,13 @@
+package day6;
+
+import org.testng.annotations.Test;
+
+public class JsonSchema_Validation {
+
+	
+	@Test()
+	void jsonschemavalidation() {
+		
+		
+	}
+}

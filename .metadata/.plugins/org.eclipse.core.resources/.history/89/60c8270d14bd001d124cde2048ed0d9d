@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome10",
+    "definitions": {
+        "Welcome10": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "book": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Book"
+                    }
+                }
+            },
+            "required": [
+                "book"
+            ],
+            "title": "Welcome10"
+        },
+        "Book": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "author": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "isbn": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "author",
+                "category",
+                "isbn",
+                "price",
+                "title"
+            ],
+            "title": "Book"
+        }
+    }
+}

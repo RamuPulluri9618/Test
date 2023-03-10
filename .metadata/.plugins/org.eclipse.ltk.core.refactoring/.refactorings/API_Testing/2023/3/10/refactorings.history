@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;API_Testing/src/test/resources/Jsonschema&apos; to &apos;jsonschema&apos;" description="Rename resource &apos;Jsonschema&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/Jsonschema" name="jsonschema" stamp="1678212165919" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;API_Testing/src/test/resources/jsonschema&apos; to &apos;jsonschema.json&apos;" description="Rename resource &apos;jsonschema&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/jsonschema" name="jsonschema.json" stamp="1678212187603" updateReferences="true"/>
+</session>
