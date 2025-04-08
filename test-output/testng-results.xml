@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-18T20:05:20 IST" name="Suite" finished-at="2025-03-18T20:05:29 IST" duration-ms="9190">
+  <suite started-at="2025-04-08T17:22:33 IST" name="Default suite" finished-at="2025-04-08T17:22:36 IST" duration-ms="2632">
     <groups>
     </groups>
-    <test started-at="2025-03-18T20:05:20 IST" name="Test" finished-at="2025-03-18T20:05:29 IST" duration-ms="9190">
+    <test started-at="2025-04-08T17:22:33 IST" name="Default test" finished-at="2025-04-08T17:22:36 IST" duration-ms="2632">
       <class name="headless.HeadlessBrowser">
-        <test-method signature="starttest()[pri:0, instance:headless.HeadlessBrowser@62379589]" started-at="2025-03-18T20:05:20 IST" name="starttest" finished-at="2025-03-18T20:05:24 IST" duration-ms="3763" status="PASS">
+        <test-method is-config="true" signature="startReporter()[pri:0, instance:headless.HeadlessBrowser@3a52dba3]" started-at="2025-04-08T17:22:33 IST" name="startReporter" finished-at="2025-04-08T17:22:33 IST" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReporter -->
+        <test-method is-config="true" signature="launchbrowser()[pri:0, instance:headless.HeadlessBrowser@3a52dba3]" started-at="2025-04-08T17:22:33 IST" name="launchbrowser" finished-at="2025-04-08T17:22:35 IST" duration-ms="2332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchbrowser -->
+        <test-method signature="starttest()[pri:0, instance:headless.HeadlessBrowser@3a52dba3]" started-at="2025-04-08T17:22:35 IST" name="starttest" finished-at="2025-04-08T17:22:35 IST" duration-ms="53" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- starttest -->
-      </class> <!-- headless.HeadlessBrowser -->
-      <class name="Selenium.webdriver.basictests.LoginTest">
-        <test-method signature="Testing()[pri:0, instance:Selenium.webdriver.basictests.LoginTest@75d4a5c2]" started-at="2025-03-18T20:05:24 IST" name="Testing" finished-at="2025-03-18T20:05:29 IST" duration-ms="5363" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:headless.HeadlessBrowser@3a52dba3]" started-at="2025-04-08T17:22:35 IST" name="getResult" finished-at="2025-04-08T17:22:36 IST" duration-ms="199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=starttest status=SUCCESS method=HeadlessBrowser.starttest()[pri:0, instance:headless.HeadlessBrowser@3a52dba3] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Testing -->
-      </class> <!-- Selenium.webdriver.basictests.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:headless.HeadlessBrowser@3a52dba3]" started-at="2025-04-08T17:22:36 IST" name="afterSuite" finished-at="2025-04-08T17:22:36 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- headless.HeadlessBrowser -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

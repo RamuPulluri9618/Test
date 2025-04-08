@@ -1,35 +1,37 @@
 package headless;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+import org.base.Baseclass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 
-public class HeadlessBrowser {
+public class HeadlessBrowser extends Baseclass {
+
+
 
 	@Test
 	public void starttest() {
-		WebDriver driver;
-
-		ChromeDriverManager.getInstance().setup();
-		driver = new ChromeDriver();
-
-		driver.get("https://www.saucedemo.com/");
 		
-		driver.manage().window().maximize();
-
+		LocalTime currentTime = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String formattedTime = currentTime.format(formatter);
+        //String test =Testing
+        
+		test = extent.createTest("Test1");
 		System.out.println("Page Title is" + driver.getTitle());
 
 		System.out.println("Page Title is" + driver.getTitle());
-
-		driver.close();
+		
+		test.log(Status.INFO, formattedTime);
 
 	}
-
-//	public static void main(String[] args) {
-//
-//	}
 
 }

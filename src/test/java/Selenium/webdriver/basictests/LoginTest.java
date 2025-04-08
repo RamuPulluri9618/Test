@@ -1,5 +1,6 @@
 package Selenium.webdriver.basictests;
 
+import org.base.Baseclass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,21 +10,15 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import pom.Swaglabsformating;
 
-public class LoginTest {
+public class LoginTest extends Baseclass{
 
 	@Test
 	public void Testing(){
 		// TODO Auto-generated method stub
 
-		WebDriver driver = null;
 		try {
-
-			ChromeDriverManager.getInstance().setup();
-			driver = new ChromeDriver();
-
-			driver.get("https://www.saucedemo.com/");
-
-			driver.manage().window().maximize();
+			
+			test = extent.createTest("Test2");
 
 			WebElement username = driver.findElement(By.xpath("//input[@id='user-name']"));
 
@@ -60,7 +55,7 @@ public class LoginTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			 driver.close();
+			 System.out.println("AM HAPPY");
 		}
 	}
 
