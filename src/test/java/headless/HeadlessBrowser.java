@@ -4,14 +4,9 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 import org.base.Baseclass;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
-
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 
 public class HeadlessBrowser extends Baseclass {
 
